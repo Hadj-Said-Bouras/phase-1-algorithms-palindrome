@@ -3,10 +3,12 @@ function isPalindrome(word) {
   // The goal --> Creating a program that will print only the words that have the same meaning if it was read from begging to the end and from the end to the begging.
   // task: Create a function that will check the words if it meet the conditions 
   // call the function every time the user clicks on "check the word" button
-  const spli = word.split('')
-  const anothere = spli.reverse('')
-  const okd = anothere.join('')
-  if (okd === word) {
+
+
+  const splitWord = word.split('') // turning the string to an array of characters to be able to reverse it.
+  const reverseWord = splitWord.reverse('') 
+  const joinSplitedParts = reverseWord.join('') // turning the array of characters into a single string to be able to compare it to the word that were given
+  if (joinSplitedParts === word) {
     return true;
   } else {
     return false;
